@@ -26,7 +26,7 @@ sudo systemctl start mariadb
 sudo systemctl enable mariadb
 
 echo -e "${c}setup mariadb"; $r
-mysql_secure_installation
+sudo mysql_secure_installation
 
 echo -e "${c}Install phpMyAdmin"; $r
 sudo apt install phpmyadmin -y
