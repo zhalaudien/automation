@@ -4,9 +4,9 @@ echo -e "${c}Update dan Upgrade System"; $r
 sudo apt update && sudo apt upgrade && sudo apt autoremove -y
 
 echo -e "${c}install PHP"; $r
-sudo apt install -y apt-transport-https lsb-release ca-certificates wget 
+sudo apt install -y apt-transport-https lsb-release ca-certificates wget
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list 
+sudo sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 sudo apt update
 sudo apt install apache2 php php-fpm php-gd php-xml php-mbstring php-curl php-zip php-intl -y
 
